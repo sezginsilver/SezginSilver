@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجرنا</title><!-- ربط ملف CSS -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body><div class="language-bar">
+    <button id="arBtn" class="active" onclick="changeLanguage('ar')">
+        🇸🇦 العربية
+    </button>
+
+    <button id="trBtn" onclick="changeLanguage('tr')">
+        🇹🇷 Türkçe
+    </button>
+</div>
+
+<h1 class="shop-subtitle"
+   data-ar="سيزجين للفضة"
+   data-tr="Sezgin SiLVER">
+    سيزجين للفضة
+</h1>
+<h1
+    data-ar="المحل التركي العثماني"
+    data-tr="OSMANLI TÜRK PAZARI">
+    المحل التركي العثماني
+</h1>
+
+<main class="container">
+
+  <div class="moving-bar">
+    <div class="moving-text" id="movingText"
+         data-ar="📍 مكة المكرمة - كوبري الروضة - تحت فندق ميرة 2"
+         data-tr="📍 makka mükkarama - köprü ravza-mira hotel.2">
+        📍 مكة المكرمة - كوبري الروضة - تحت فندق ميرة 2
+    </div>
+</div>
+<div
+class="products"
+data-ar="فضة - كهرمان - سُبَح - لؤلؤ - عقيق - مرجان - زمرد - سجاد خطّاطة - ألبسة - ساعات - عطور - هدايا - خردوات"
+data-tr="Gümüş - Kehribar - Tesbihler - İnci - Akik - Mercan - Zümrüt -  Seccadeler - Giyim - Saatler - Parfümler - Hediyeler - Hırdavatler">
+مسابح • عقيق • كهرمان • خواتم • سلاسل
+</div>
+
+<!-- الموقع -->
+<a
+    class="social-button"
+    href="https://maps.app.goo.gl/Pd8BTDcsUojfiGDL8?g_st=awb"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-ar=" موقعنا"
+    data-tr=" Web Sitemiz">
+    <i class="fa-solid fa-location-dot"></i>
+    <span>🌐 موقعنا</span>
+</a>
+<a
+    class="social-button"
+    href="https://www.instagram.com/sezgin_gumusculuk?rpxt=MWNoeDJ0NmNlZTFpOA=="
+    target="_blank"
+    rel="noopener noreferrer"
+    data-ar="تابعنا على إنستغرام"
+    data-tr="Instagram'da Bizi Takip Edin">
+    <i class="fa-brands fa-instagram instagram-icon"></i>
+    <span>تابعنا على إنستغرام</span>
+
+</a><!-- تيك توك -->
+<a
+    class="social-button"
+    href="https://www.tiktok.com/@sezgin_silver?_r=1&_t=ZS-9AivOpEyXA5"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-ar="تابعنا على تيك توك"
+    data-tr="Bizi TikTok'ta Takip Edin">
+    <i class="fa-brands fa-tiktok"></i>
+    <span>تابعنا على تيك توك</span>
+</a>
+<button
+    class="social-button Whatsapp-button"
+    onclick="openWhatsapp()"
+    data-ar="تواصل معنا عبر واتساب"
+    data-tr="WhatsApp Üzerinden Bize Ulaşın">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>تواصل معنا عبر واتساب</span>
+</button>
+
+
+
+    <div
+        class="footer"
+        data-ar="نسعد بخدمتكم دائمًا ❤️"
+        data-tr="Size hizmet vermekten mutluluk duyarız ❤️">
+        نسعد بخدمتكم دائمًا ❤️
+    </div>
+
+</main>
+
+<!-- نافذة خيارات تيليجرام -->
+<div class="modal" id="WhatsappModal">
+
+    <div class="modal-content">
+
+        <h2
+            data-ar=" تواصل معنا عبر واتساب"
+            data-tr=" Whatsapp Üzerinden İletişim">
+            تواصل معنا عبر الواتساب
+        </h2>
+
+        <p
+            data-ar="اختر الحساب الذي تريد التواصل معه:"
+            data-tr="İletişim kurmak istediğiniz hesabı seçin:">
+            اختر الحساب الذي تريد التواصل معه:
+        </p>
+
+        <a
+            class="social-button"
+            href="https://wa.me/+966563646264"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-ar="00966563646264 🇸🇦"
+            data-tr="00966563646264 🇸🇦">
+            الحساب الأول
+        </a>
+
+        <a
+            class="social-button"
+            href="https://wa.me/+905321131393"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-ar="00905321131393 🇹🇷"
+            data-tr="00905321131393 🇹🇷">
+            الحساب الثاني
+        </a>
+
+        <button
+            class="close-button"
+            onclick="closeWhatsapp()"
+            data-ar="إغلاق"
+            data-tr="Kapat">
+            إغلاق
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+    function changeLanguage(language) {
+        document.documentElement.lang = language;
+
+        // تحديد اتجاه الصفحة حسب اللغة
+        document.documentElement.dir =
+            language === "ar" ? "rtl" : "ltr";
+
+        // تغيير النصوص
+       // تغيير النصوص مع الحفاظ على الأيقونات
+// تغيير النصوص مع الحفاظ على الشعارات
+document.querySelectorAll("[data-ar]").forEach(function(element) {
+    const text = element.getAttribute("data-" + language);
+    const span = element.querySelector("span");
+
+    if (span) {
+        span.textContent = text;
+    } else {
+        element.textContent = text;
+    }
+});
+
+        // تحديث أزرار اللغة
+        document.getElementById("arBtn").classList.toggle(
+            "active",
+            language === "ar"
+        );
+
+        document.getElementById("trBtn").classList.toggle(
+            "active",
+            language === "tr"
+        );
+       // تحريك النص شمال يمين
+       const movingText = document.getElementById("movingText");
+
+if (movingText) {
+    movingText.style.animationDirection =
+        language === "ar" ? "reverse" : "normal";
+}
+
+        // تحديث عنوان الصفحة
+        document.title = language === "ar"
+            ? "متجري الفاخر"
+            : "Lüks Mağazam";
+
+        // حفظ اللغة المختارة
+        localStorage.setItem("shopLanguage", language);
+    }
+// فتح نافذة تيليجرام
+    function openWhatsapp() {
+        document.getElementById("WhatsappModal").style.display = "flex";
+    }
+
+    // إغلاق نافذة تيليجرام
+    function closeWhatsapp() {
+        document.getElementById("WhatsappModal").style.display = "none";
+    }
+
+    // إغلاق النافذة عند الضغط خارج محتواها
+    document.getElementById("WhatsappModal").addEventListener(
+        "click",
+        function(event) {
+            if (event.target === this) {
+                closeWhatsapp();
+            }
+        }
+    );
+
+    // استعادة اللغة المحفوظة
+    const savedLanguage =
+        localStorage.getItem("shopLanguage") || "ar";
+
+    changeLanguage(savedLanguage);
+</script>
+
+</body>
+</html>
