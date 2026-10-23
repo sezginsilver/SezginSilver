@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
+</div>
 <body><div class="language-bar">
     <button id="arBtn" class="active" onclick="changeLanguage('ar')">
         🇸🇦 العربية
@@ -21,6 +23,7 @@
    data-tr="Sezgin SiLVER">
     سيزجين للفضة
 </h1>
+
 <h1
     data-ar="المحل التركي العثماني"
     data-tr="OSMANLI TÜRK PAZARI">
@@ -35,6 +38,7 @@
          data-tr="📍 makka mükkarama - köprü ravza-mira hotel.2">
         📍 مكة المكرمة - كوبري الروضة - تحت فندق ميرة 2
     </div>
+    
 </div>
 <div
 class="products"
@@ -94,8 +98,20 @@ data-tr="Gümüş - Kehribar - Tesbihler - İnci - Akik - Mercan - Zümrüt -  S
     </div>
 
 </main>
-
-<!-- نافذة خيارات تيليجرام -->
+<!-- زر حقوق التصميم والبرمجة ورابط الواتساب المباشر -->
+<!-- قسم الحقوق العصري - osama Dev -->
+<div class="modern-footer-dev">
+    <a href="https://wa.me/967776320201?text=مرحباً%20مهندس%20أسامة،%20وصلت%20إليك%20من%20خلال%20الموقع" 
+     href="https://wa.me/967776320201?text=مرحباً%20مهندس%20أسامة،%20وصلت%20إليك%20من%20خلال%20الموقع" 
+       target="_blank"
+       class="neon-dev-link"
+       data-ar="تصميم وبرمجة : OsAmA Dev" 
+       data-tr="Tasarım ve Geliştirme: OsAmA Dev">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>تصميم وبرمجة osama Dev</span>
+    </a>
+</div>
+<!-- نافذة خيارات الواتساب -->
 <div class="modal" id="WhatsappModal">
 
     <div class="modal-content">
@@ -142,6 +158,7 @@ data-tr="Gümüş - Kehribar - Tesbihler - İnci - Akik - Mercan - Zümrüt -  S
 
     </div>
 
+    
 </div>
 
 <script>
@@ -152,8 +169,6 @@ data-tr="Gümüş - Kehribar - Tesbihler - İnci - Akik - Mercan - Zümrüt -  S
         document.documentElement.dir =
             language === "ar" ? "rtl" : "ltr";
 
-        // تغيير النصوص
-       // تغيير النصوص مع الحفاظ على الأيقونات
 // تغيير النصوص مع الحفاظ على الشعارات
 document.querySelectorAll("[data-ar]").forEach(function(element) {
     const text = element.getAttribute("data-" + language);
@@ -164,6 +179,7 @@ document.querySelectorAll("[data-ar]").forEach(function(element) {
     } else {
         element.textContent = text;
     }
+    
 });
 
         // تحديث أزرار اللغة
